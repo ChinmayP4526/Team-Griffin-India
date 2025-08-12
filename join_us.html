@@ -55,7 +55,7 @@
         <p>We're always on the lookout for passionate individuals who are enthusiastic about aeronautics, coding, and
             innovation.</p>
 
-        <form id="joinForm" class="join-form" action="https://teamgriffin.infinityfree.me/joinus.php" method="POST">
+        <form id="joinForm" class="join-form">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required />
 
@@ -141,7 +141,7 @@
             };
 
             try {
-                const response = await fetch('backend/register-joinUs.php', {
+                const response = await fetch('https://teamgriffin.infinityfree.me/register-joinUS.php', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data),
@@ -161,4 +161,8 @@
 </body>
 
 </html>
+
+
+
+
 
