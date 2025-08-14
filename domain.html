@@ -23,7 +23,23 @@
 
 <body>
     <header>
-
+        <h3 class="menu-head">Menu</h3>
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="off-screen-menu">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="/index.html" class=" nav-links ">Home</a></li>
+                <li><a href="/gallery.html" class=" nav-links">Gallery</a></li>
+                <li><a href="/achievements.html" class=" nav-links">Achievements</a></li>
+                <li><a href="/domain.html" class=" nav-links active">Domain</a></li>
+                <li><a href="/sponsors.html" class=" nav-links">Sponsors</a></li>
+                <li><a href="https://teamgriffin.infinityfree.me/" class=" nav-links">Join Us</a></li>
+            </ul>
+        </div>
         <nav>
             <div class="navflex">
                 <span><img src="images/TGI LOGO(OG).png" alt="TGI" class="tgilogo"></span>
@@ -162,7 +178,19 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+        let hamMenu = document.querySelector(".ham-menu");
+        let offMenu = document.querySelector(".off-screen-menu");
+        let menuHead=document.querySelector(".menu-head");
+
+        hamMenu.addEventListener("click", () => {
+            hamMenu.classList.toggle("actives");
+            offMenu.classList.toggle("actives")
+            menuHead.classList.toggle("actives")
+        })
+    </script>
 </body>
 
 </html>
+
 
