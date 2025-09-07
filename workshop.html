@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Workshop | Team Griffin India</title>
+    <!-- <meta name="description"
+        content="Become a part of Team Griffin India. Fill out the form to join our student aeronautics club and contribute to future aerospace innovations.">
+    <meta name="keywords"
+        content="join Team Griffin India, aeronautics club registration, student aerospace club, drone enthusiasts"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="workshop.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const current = window.location.pathname.split("/").pop();
+            const links = document.querySelectorAll(".nav-links");
+
+            links.forEach(link => {
+                const href = link.getAttribute("href");
+                if (href === current || (href === "index.html" && current === "")) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h3 class="menu-head">Menu</h3>
+    <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="off-screen-menu">
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="/index.html" class=" nav-links">Home</a></li>
+            <li><a href="/gallery.html" class=" nav-links">Gallery</a></li>
+            <li><a href="/achievements.html" class=" nav-links">Achievements</a></li>
+            <li><a href="/domain.html" class=" nav-links">Domain</a></li>
+            <li><a href="/sponsors.html" class=" nav-links">Sponsors</a></li>
+            <li><a href="/join_us.html" class=" nav-links">Join Us</a></li>
+            <li><a href="/workshop.html" class=" nav-links active9">Workshop</a></li>
+        </ul>
+    </div>
+    <nav>
+        <div class="navflex">
+            <span><img src="images/TGI LOGO(OG).png" alt="TGI" class="tgilogo"></span>
+            <ul class="links">
+
+                <li><a href="/index.html" class=" nav-links">Home</a></li>
+                <li><a href="/gallery.html" class=" nav-links">Gallery</a></li>
+                <li><a href="/achievements.html" class=" nav-links">Achievements</a></li>
+                <li><a href="/domain.html" class=" nav-links">Domain</a></li>
+                <li><a href="/sponsors.html" class=" nav-links">Sponsors</a></li>
+                <li><a href="/join_us.html" class=" nav-links">Join Us</a></li>
+                <li><a href="/workshop.html" class=" nav-links active">Workshop</a></li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <main>
+        <img src="images/workshop-poster.png" alt="workshop-poster" class="poster-img">
+    </main>
+    <button id="btn"><a href="/workshopForm.html">Register Now !</a></button>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="foot-img">
+                <img src="images/TGI LOGO(OG).png" alt="tgilogo">
+            </div>
+            <div class="footer-section about">
+                <div class="together">
+                    <h2>Team Griffin India</h2>
+                </div>
+                <p>We are a passionate student aeronautics club focused on building innovative aerospace solutions and
+                    fostering future engineers.</p>
+            </div>
+
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/gallery.html">Gallery</a></li>
+                    <li><a href="/achievements.html">Achievements</a></li>
+                    <li><a href="/domain.html">Domain</a></li>
+                    <li><a href="/sponsors.html">Sponsors</a></li>
+                    <li><a href="/join_us.html">Join Us</a></li>
+                </ul>
+            </div>
+
+
+
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: teamgriffin@vit.edu</p>
+                <p>Phone: +91 95790 62934</p>
+                <p>Location: 666, Upper Indiranagar, Bibwewadi, Pune, Maharashtra, INDIA - 411 037.</p>
+            </div>
+
+            <div class="footer-section socials">
+                <h3>Follow Us</h3>
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="http://instagram.com/teamgriffinindia/" target="_blank"><img src="images/insta.png"
+                        alt="Instagram"></a>
+                <a href="https://www.linkedin.com/company/team-griffin-india/" target="_blank"><img
+                        src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+            <div class="footer-section map">
+                <h3>Find Us</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.442016683995!2d73.86562877465086!3d18.463626970912337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ea950f616219%3A0x321bdae2cea9f064!2sVishwakarma%20Institute%20of%20Technology%20(VIT)!5e0!3m2!1sen!2sin!4v1746987998583!5m2!1sen!2sin"
+                    width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Team Griffin India. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+        <script>
+        let hamMenu = document.querySelector(".ham-menu");
+        let offMenu = document.querySelector(".off-screen-menu");
+        let menuHead=document.querySelector(".menu-head");
+
+        hamMenu.addEventListener("click", () => {
+            hamMenu.classList.toggle("actives");
+            offMenu.classList.toggle("actives")
+            menuHead.classList.toggle("actives")
+        })
+    </script>
+
+
+</body>
+
+</html>
