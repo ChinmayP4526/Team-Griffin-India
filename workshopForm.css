@@ -1,0 +1,731 @@
+* {
+    padding: 0;
+    color: white;
+    margin: 0;
+    /* outline: 1px solid red; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 0);
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+.nav-links {
+    font-family: 'Orbitron', sans-serif;
+}
+
+nav {
+
+    /* position: fixed;*/
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    font-family: sans-serif;
+    height: 70px;
+    /* Adjust based on design */
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+nav img {
+    width: 80px;
+}
+
+nav ul {
+    display: flex;
+    margin: auto;
+
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+}
+
+nav ul li {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+
+}
+
+nav ul a:hover {
+    border-bottom: 3px solid rgb(255, 132, 0);
+}
+
+.navflex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.active {
+    color: orangered;
+}
+
+.tgilogo {
+    padding: 0px;
+    margin-left: 54px;
+}
+
+.join-section {
+    margin: 80px auto;
+    max-width: 600px;
+    padding: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    /* background-color: #0831a7; */
+    border-radius: 20px;
+    /* box-shadow: 0px 0px 17px yellow; */
+}
+
+.join-section h1 {
+    color: #f0c330;
+    padding: 20px auto;
+}
+
+.join-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* .join-section p{
+    color: #f0c330;
+} */
+.join-form input,
+.join-form textarea {
+    padding: 0.8rem;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    background-color: white;
+}
+
+.join-form button {
+    padding: 0.9rem;
+    background-color: #185aaf;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.join-form select {
+    padding: 0.8rem;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.join-form option {
+    color: black;
+    border-radius: 8px;
+    padding: 0.8rem;
+}
+
+.join-form button:hover {
+    background-color: #00337a;
+}
+
+.card {
+    margin: 50px auto;
+    padding: 2em;
+    width: 120vw;
+    background: #1c1f2b;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.card::after,
+.card::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 4px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+.card::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+#topBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    background-color: orange;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    display: none;
+    z-index: 999;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#topBtn:hover {
+    background-color: #ff7300;
+}
+
+.show {
+    animation: Slidein 1s ease-in;
+}
+
+.close {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#receipt {
+    background-color: white;
+    text-align: center;
+}
+
+.gen-receipt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+#fee_pdf::file-selector-button {
+    background-color: #d17f37;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+#fee_pdf::file-selector-button:hover {
+    background-color: #f59623;
+}
+
+#btn {
+    width: 90px;
+    height: 45px;
+    text-align: center;
+    padding: 10px;
+    font-family: inherit;
+}
+
+.paragraph {
+
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    margin-left: 20px;
+    /* word-break: break-all; */
+    font-size: 14px;
+    gap: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+.paragraph a {
+    color: rgb(255, 208, 0);
+}
+
+.footer {
+    background-color: #101820;
+    color: #fff;
+    padding: 40px 0 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.foot-img img {
+    width: 48px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    color: #ccc;
+}
+
+.together {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+    margin-bottom: 15px;
+    color: #f0c330;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f0c330;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.footer-section.socials a {
+    display: inline-block;
+    margin-right: 10px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s;
+}
+
+.footer-section.socials a:hover {
+    transform: scale(1.2);
+}
+
+.footer-section.socials img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* --- Base tweaks for smaller screens --- */
+@media (max-width: 768px) {
+
+    /* General Reset */
+    body {
+        font-size: 16px;
+        /* padding: 0 10px; */
+        overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+        align-items: flex-start;
+        width: 100%;
+
+    }
+
+    .navflex {
+        gap: 40px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    nav img {
+        width: 35px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+    }
+
+    .navflex ul {
+        gap: 10px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+    }
+
+    .tgilogo {
+        margin-left: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .map iframe {
+        width: 230px;
+        height: 200px;
+        object-fit: contain;
+    }
+
+    .footer-container {
+        gap: 27px;
+
+    }
+
+
+    #topbtn {
+        width: 20px;
+        padding: 3px 9px;
+        font-size: 14px;
+
+    }
+
+    .show {
+        position: fixed;
+        bottom: 8%;
+        right: 14%;
+        animation: Slidein 1s ease-in;
+        padding: 3px 9px;
+        font-size: 14px;
+    }
+
+    @keyframes Slidein {
+        0% {
+            right: 250px;
+        }
+
+        100% {
+            right: 120px;
+        }
+
+    }
+
+    .card {
+        margin: 50px auto;
+        justify-content: center;
+        align-items: center;
+        width:71vw;
+    }
+}
+
+@media (max-width:426px) {
+    body {
+        font-size: 16px;
+        /* padding: 0 10px; */
+        overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+        align-items: flex-start;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 8.5px;
+    }
+
+    .navflex {
+        gap: 15px;
+        width: 100%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+    }
+
+    .navflex ul {
+        gap: 0px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin: 5px 0;
+        font-size: 5px;
+    }
+
+    .nav-links a {
+        display: block;
+        font-size: 5px;
+        padding: 0;
+        /* padding: 10px; */
+    }
+
+    .tgilogo {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .map iframe {
+        width: 230px;
+        height: 200px;
+        object-fit: contain;
+    }
+
+    .footer-container {
+        gap: 27px;
+
+    }
+
+    #topbtn.hide {
+        display: none !important;
+        position: static;
+        animation: none;
+    }
+}
+
+@media (max-width:376px) {
+    body {
+        font-size: 16px;
+        /* padding: 0 10px; */
+        overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+        align-items: flex-start;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 7px;
+    }
+
+    .navflex {
+        gap: 15px;
+        width: 100%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+    }
+
+    .navflex ul {
+        gap: 0px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin: 5px 0;
+        font-size: 5px;
+    }
+
+    .nav-links a {
+        display: block;
+        font-size: 5px;
+        padding: 0;
+        /* padding: 10px; */
+    }
+
+    .tgilogo {
+        display: none;
+    }
+
+    #topbtn.hide {
+        display: none;
+        position: static;
+        animation: none;
+        width: 20px;
+        height: 10px;
+        padding: 3px 9px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:320px) {
+    body {
+        font-size: 16px;
+        /* padding: 0 10px; */
+        overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+        align-items: flex-start;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 6px;
+    }
+
+    .navflex {
+        gap: 15px;
+        width: 100%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+    }
+
+    .navflex ul {
+        gap: 0px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin: 5px 0;
+        font-size: 5px;
+    }
+
+    .nav-links a {
+        display: block;
+        font-size: 5px;
+        padding: 0;
+        /* padding: 10px; */
+    }
+
+    .tgilogo {
+        display: none;
+    }
+
+    #topbtn.hide {
+        display: none;
+        position: static;
+        animation: none;
+        padding: 3px 9px;
+        font-size: 14px;
+    }
+}
+
+#customMessageBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 40vw;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    transform: translate(-50%, -50%);
+    background: black;
+    color: white;
+    padding: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 10px;
+    /* Ensure it's above other content */
+}
+
+#customMessageBox h3 {
+    font-size: 32px;
+    color: #f0c330;
+}
+
+#customMessageBox .buttons button {
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+
+}
+
+.buttons {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#customMessageBox button {
+    color: white;
+    margin: 10px;
+    padding: 8px 15px;
+    cursor: pointer;
+    background: #1c1f2b;
+}
+
+.prn input{
+    margin-top: 15px;
+    width: 95%;
+}
+.blur {
+    /* display: none; */
+    width: 100vw;
+    height: 150vh;
+    position: absolute;
+    top: 0;
+    backdrop-filter: blur(5px);
+    /* Blur effect on the background */
+    z-index: 999;
+    /* Ensure it's on top of other content */
+
+}
