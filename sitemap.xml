@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
   <url>
-    <loc>https://www.teamgriffinindia.com/</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://chinmayp4526.github.io/Team-Griffin-India/index.html</loc>
     <priority>1.0</priority>
   </url>
+
+  <!-- Other Pages -->
   <url>
-    <loc>https://www.teamgriffinindia.com/gallery.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://chinmayp4526.github.io/Team-Griffin-India/achievements.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://chinmayp4526.github.io/Team-Griffin-India/workshop.html</loc>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.teamgriffinindia.com/achievements.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://chinmayp4526.github.io/Team-Griffin-India/gallery.html</loc>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.teamgriffinindia.com/domain.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://chinmayp4526.github.io/Team-Griffin-India/domain.html</loc>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://www.teamgriffinindia.com/sponsors.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://chinmayp4526.github.io/Team-Griffin-India/sponsors.html</loc>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://www.teamgriffinindia.com/join_us.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://chinmayp4526.github.io/Team-Griffin-India/join_us.html</loc>
+    <priority>0.8</priority>
   </url>
+
 </urlset>
