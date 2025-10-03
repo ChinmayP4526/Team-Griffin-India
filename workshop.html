@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <title>Workshop | Team Griffin India</title>
-    <!-- <meta name="description"
+    <meta name="description"
         content="Become a part of Team Griffin India. Fill out the form to join our student aeronautics club and contribute to future aerospace innovations.">
     <meta name="keywords"
-        content="join Team Griffin India, aeronautics club registration, student aerospace club, drone enthusiasts"> -->
+        content="join Team Griffin India, aeronautics club registration, student aerospace club, drone enthusiasts">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="workshop.css" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+   
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -29,7 +30,7 @@
     </script>
 </head>
 
-<body>
+<body class="background">
     <h3 class="menu-head">Menu</h3>
     <div class="ham-menu">
         <span></span>
@@ -44,7 +45,7 @@
             <li><a href="/achievements.html" class=" nav-links">Achievements</a></li>
             <li><a href="/domain.html" class=" nav-links">Domain</a></li>
             <li><a href="/sponsors.html" class=" nav-links">Sponsors</a></li>
-            <li><a href="https://teamgriffin.infinityfree.me/index.php" class=" nav-links">Join Us</a></li>
+            <li><a href="/join_us.html" class=" nav-links">Join Us</a></li>
             <li><a href="/workshop.html" class=" nav-links active">Workshop</a></li>
         </ul>
     </div>
@@ -58,21 +59,24 @@
                 <li><a href="/achievements.html" class=" nav-links">Achievements</a></li>
                 <li><a href="/domain.html" class=" nav-links">Domain</a></li>
                 <li><a href="/sponsors.html" class=" nav-links">Sponsors</a></li>
-                <li><a href="https://teamgriffin.infinityfree.me/index.php" class=" nav-links">Join Us</a></li>
+                <li><a href="/join_us.html" class=" nav-links">Join Us</a></li>
                 <li><a href="/workshop.html" class=" nav-links active">Workshop</a></li>
 
             </ul>
 
         </div>
     </nav>
-     <main class="poster-container">
-        <div class="flex">
+    <main class="poster-container">
+        <img src="images/workshop-poster.png" alt="workshop-poster" class="poster-img">
+        <button type="button" id="btn"><a href="https://teamgriffin.infinityfree.me/rcplaneWorkshop.html">Register Now</a></button>
+        <!-- <div class="flex">
 
-            <img src="images/workshop-poster.png" alt="workshop-poster" class="poster-img">
             <img src="images/workshop-poster-2.png" alt="workshop-poster" class="poster-img">
-        </div>
-        <p class="reg">Registrations are Closed !!</p>
+        </div> -->
+        <!-- <p class="reg">Registrations are Closed !!</p> -->
+        <!-- <img src="images/workshop-poster-2.png" alt="workshop-poster" class="poster-img hiding"> -->
     </main>
+
     <footer class="footer">
         <div class="footer-container">
             <div class="foot-img">
@@ -94,7 +98,7 @@
                     <li><a href="/achievements.html">Achievements</a></li>
                     <li><a href="/domain.html">Domain</a></li>
                     <li><a href="/sponsors.html">Sponsors</a></li>
-                    <li><a href="https://teamgriffin.infinityfree.me/index.php">Join Us</a></li>
+                    <li><a href="/join_us.html">Join Us</a></li>
                 </ul>
             </div>
 
@@ -109,7 +113,7 @@
 
             <div class="footer-section socials">
                 <h3>Follow Us</h3>
-                
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
                 <a href="http://instagram.com/teamgriffinindia/" target="_blank"><img src="images/insta.png"
                         alt="Instagram"></a>
                 <a href="https://www.linkedin.com/company/team-griffin-india/" target="_blank"><img
@@ -131,10 +135,10 @@
         </div>
     </footer>
 
-        <script>
+    <script>
         let hamMenu = document.querySelector(".ham-menu");
         let offMenu = document.querySelector(".off-screen-menu");
-        let menuHead=document.querySelector(".menu-head");
+        let menuHead = document.querySelector(".menu-head");
 
         hamMenu.addEventListener("click", () => {
             hamMenu.classList.toggle("actives");
@@ -143,14 +147,6 @@
         })
     </script>
 
-
 </body>
 
-
 </html>
-
-
-
-
-
-
