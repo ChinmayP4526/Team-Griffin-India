@@ -1726,7 +1726,7 @@ nav ul a:hover {
 @media (max-width: 480px) {
     .sticky-note {
         width: 114px;
-        height: 108px;
+        height: 140px;
         right: 13px;
         top: 10px;
         margin: 0;
@@ -1740,4 +1740,5 @@ nav ul a:hover {
         font-size: 10px;
     }
 }
+
 
