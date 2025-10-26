@@ -1698,6 +1698,12 @@ nav ul a:hover {
     transform: rotate(0deg) scale(1.05);
 }
 
+.sticky-note h3,span {
+    margin-top: 0;
+    font-size: 18px;
+   color: rgb(253, 245, 0);
+
+}
 /* Pin stays relative to sticky note */
 .pin {
     position: absolute;
@@ -1734,3 +1740,4 @@ nav ul a:hover {
         font-size: 10px;
     }
 }
+
