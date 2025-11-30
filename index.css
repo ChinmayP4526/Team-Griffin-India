@@ -256,7 +256,7 @@ nav ul a:hover {
 .content {
     background-color: #2d2d2c;
     width: 80%;
-    height: 268px;
+   height: 277px;
     padding: 40px;
     display: flex;
     justify-content: space-between;
@@ -324,7 +324,7 @@ nav ul a:hover {
 }
 
 .space {
-    gap: 400px;
+    gap: 190px;
 }
 
 .logos h1 {
@@ -1698,12 +1698,14 @@ nav ul a:hover {
     transform: rotate(0deg) scale(1.05);
 }
 
-.sticky-note h3,span {
+.sticky-note h3,
+span {
     margin-top: 0;
     font-size: 18px;
-   color: rgb(253, 245, 0);
+    color: rgb(253, 245, 0);
 
 }
+
 /* Pin stays relative to sticky note */
 .pin {
     position: absolute;
@@ -1726,7 +1728,7 @@ nav ul a:hover {
 @media (max-width: 480px) {
     .sticky-note {
         width: 114px;
-        height: 140px;
+        height: 108px;
         right: 13px;
         top: 10px;
         margin: 0;
@@ -1740,5 +1742,3 @@ nav ul a:hover {
         font-size: 10px;
     }
 }
-
-
